@@ -3,7 +3,7 @@
   'use strict';
 
   angular.module('RestaurantApp', [])
-        .controller('NarrowDownController', NarrowDownController)
+        .controller('NarrowItDownController', NarrowItDownController)
         .service('MenuSearchService', MenuSearchService)
         .constant('APIBasePath', "https://davids-restaurant.herokuapp.com/menu_items.json")
         .directive('foundItems', foundItemsDirective);
@@ -28,8 +28,8 @@
   }
 
   // Controller
-  NarrowDownController.$inject = ['MenuSearchService'];
-  function NarrowDownController (MenuSearchService) {
+  NarrowItDownController.$inject = ['MenuSearchService'];
+  function NarrowItDownController (MenuSearchService) {
     var controller = this;
     controller.searchTerm = "";
 
