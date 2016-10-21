@@ -1,0 +1,22 @@
+<h3 ng-if="controller.found.length">{{ controller.found.length}} Selected Items</h3>
+<div class="row-fluid menu-container">
+  <div class="col-md-6 menu-item" ng-repeat="item in controller.found">
+    <div class="panel panel-default ">
+      <div class="panel-heading">
+        <strong>{{ item.short_name }} : </strong>{{ item.name }}
+        <span class="pull-right">
+          <button class="btn btn-xs btn-danger" ng-click="controller.onRemove({index: $index});">X Don't want this one</button>
+        </span>
+      </div>
+      <div class="panel-body">
+         <p>
+          {{ item.description }}
+         </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Narrow Down Your Menu Choice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+<body ng-app="RestaurantApp">
+   <div class="container" ng-controller="NarrowDownController as controller">
+    <div class="row">
+      <h1>Narrow Down Your Chinese Menu Choice</h1>
+    </div>
+
+    <div class="row">
+      <div class="form">
+        <div class="form-group">
+          <input type="text" placeholder="search term" class="form-control" ng-model="controller.searchTerm">
+        </div>
+        <div class="form-group narrow-button">
+          <button class="btn btn-primary" ng-click="controller.getMatchedMenuItems(controller.searchTerm)">Narrow It Down For Me!</button>
+        </div>
+        <div class="loader"></div>
+      </div>
+    </div>
+
+    <!-- found-items should be implemented as a component -->
+    <div class="row">
+      <found-items found="controller.foundItems" on-remove="controller.removeItem(index)"></found-items>
+      <div class="alert alert-danger" ng-if="controller.message">
+        <strong>{{controller.message}}</strong>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script src="jquery-3.1.0.min.js"></script>
+  <script src="angular.min.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
