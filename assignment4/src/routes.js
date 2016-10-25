@@ -26,7 +26,7 @@
     .state('categories.items', {
       url: '/categories/{catId}',
       controller: "ItemsController as itemList",
-      templateUrl: '/src/menudata/templates/items.template.html'
+      templateUrl: 'src/menudata/templates/items.template.html'
     })
     ;
   }
