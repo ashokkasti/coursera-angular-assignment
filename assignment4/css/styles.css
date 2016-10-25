@@ -1,0 +1,41 @@
+body {
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+  background: #7474BF; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #7474BF , #348AC7); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #7474BF , #348AC7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #9ecef7;
+  text-decoration: none;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-weight: 900;
+  color: #FFF;
+}
+
+
+.panel-body,.list-group-item-text {
+  font-weight: 300;
+}
+
+
+.badge-danger {
+  background-color: #ff5722
+}
+
+.list-group-item[ui-sref] {
+  cursor: pointer;
+}
+
+.list-group-item[ui-sref]:hover {
+  background-color: #EEE;
+}

@@ -1,0 +1,17 @@
+<div class="col-md-6">
+  <ul class="list-group">
+    <li ng-repeat="category in catList.categories"
+        ui-sref="categories.items({catId: category.short_name})"
+         class="list-group-item">
+
+         {{category.name}}
+
+         <span class="badge">{{category.short_name}}</span>
+
+    </li>
+  </ul>
+</div>
+
+<div class="col-md-6">
+  <ui-view></ui-view>
+</div>
